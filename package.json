@@ -1,0 +1,15 @@
+{
+  "name": "subdivide-js",
+  "version": "0.0.1",
+  "description": "Bezier curve subdivision",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example:build": "browserify example/example.js -o example/bundle.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "directories": {
+    "example": "example"
+  }
+}

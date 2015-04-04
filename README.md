@@ -1,6 +1,10 @@
 subdivide-js
 ========
 
+Bezier curve subdivision in JavaScript
+
+Based on [Anti-Grain Geometry bezier subdivision](http://antigrain.com/research/adaptive_bezier/)
+
 ```javascript
 var subdivide = require("subdivide-js");
 

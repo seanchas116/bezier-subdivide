@@ -12,7 +12,9 @@
   "directories": {
     "example": "example"
   },
-  "dependencies": {},
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  },
   "devDependencies": {
     "browserify": "^9.0.7"
   },

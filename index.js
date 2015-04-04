@@ -15,6 +15,8 @@
 
 "use strict";
 
+var assign = require("object-assign");
+
 function calc_sq_distance(x1, y1, x2, y2)
 {
   var dx = x2-x1;
@@ -26,7 +28,7 @@ var curve_recursion_limit = 32;
 var curve_angle_tolerance_epsilon = 0.01;
 var curve_collinearity_epsilon = 1e-30;
 
-function Subdivision(curve) {
+function Subdivision(curve, opts) {
   var x1 = curve[0][0];
   var y1 = curve[0][1];
   var x2 = curve[1][0];
@@ -36,10 +38,17 @@ function Subdivision(curve) {
   var x4 = curve[3][0];
   var y4 = curve[3][1];
 
+  var options = {
+    approximationScale: 1,
+    angleTolerance: 0,
+    cuspLimit: 0
+  };
+  assign(options, opts);
+
   this.points = [];
-  this.approximation_scale = 1;
-  this.angle_tolerance = 0;
-  this.cusp_limit = 0;
+  this.approximation_scale = options.approximationScale;
+  this.angle_tolerance = options.angleTolerance;
+  this.cusp_limit = options.cuspLimit;
   this.distance_tolerance_square = 0.5 / this.approximation_scale;
   this.distance_tolerance_square *= this.distance_tolerance_square;
   this.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
@@ -259,7 +268,7 @@ Subdivision.prototype.recursive_bezier = function(x1, y1, x2, y2, x3, y3, x4, y4
   this.recursive_bezier(x1234, y1234, x234, y234, x34, y34, x4, y4, level + 1);
 };
 
-module.exports = function subdivide(curve)
+module.exports = function subdivide(curve, opts)
 {
-  return new Subdivision(curve).points;
+  return new Subdivision(curve, opts).points;
 };

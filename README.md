@@ -8,6 +8,7 @@ Based on [Anti-Grain Geometry bezier subdivision](http://antigrain.com/research/
 ```javascript
 var subdivide = require("bezier-subdivide");
 
-var curve = [[0, 0], [0, 0.5], [0.5, 1], [1, 1]];
+var curve = [[0, 0], [0, 50], [50, 100], [100, 100]];
 var points = subdivide(curve);
+// [[0,0],[0.09765625,4.6875],[1.23291015625,14.02587890625],...,[100,100]]
 ```

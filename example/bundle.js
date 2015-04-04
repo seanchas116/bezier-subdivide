@@ -69,15 +69,14 @@ function Subdivision(curve) {
   this.bezier(x1, y1, x2, y2, x3, y3, x4, y4);
 }
 
-Subdivision.prototype.bezier =
-  function(x1, y1, x2, y2, x3, y3, x4, y4) {
+Subdivision.prototype.bezier = function(x1, y1, x2, y2, x3, y3, x4, y4)
+{
   this.points.push([x1, y1]);
   this.recursive_bezier(x1, y1, x2, y2, x3, y3, x4, y4, 0);
   this.points.push([x4, y4]);
 };
 
-Subdivision.prototype.recursive_bezier =
-  function(x1, y1, x2, y2, x3, y3, x4, y4, level)
+Subdivision.prototype.recursive_bezier = function(x1, y1, x2, y2, x3, y3, x4, y4, level)
 {
   if(level > curve_recursion_limit)
   {
@@ -284,7 +283,8 @@ Subdivision.prototype.recursive_bezier =
   this.recursive_bezier(x1234, y1234, x234, y234, x34, y34, x4, y4, level + 1);
 };
 
-module.exports = function subdivide(curve) {
+module.exports = function subdivide(curve)
+{
   return new Subdivision(curve).points;
 };
 

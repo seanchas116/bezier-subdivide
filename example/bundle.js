@@ -117,8 +117,8 @@ Subdivision.prototype.recursive_bezier = function(x1, y1, x2, y2, x3, y3, x4, y4
   var d3 = Math.abs(((x3 - x4) * dy - (y3 - y4) * dx));
   var da1, da2, k;
 
-  switch((Math.round(d2 > curve_collinearity_epsilon) << 1) +
-      Math.round(d3 > curve_collinearity_epsilon))
+  switch(((d2 > curve_collinearity_epsilon) << 1) +
+      (d3 > curve_collinearity_epsilon))
   {
   case 0:
     // All collinear OR p1==p4

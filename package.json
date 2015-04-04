@@ -1,5 +1,5 @@
 {
-  "name": "subdivide-js",
+  "name": "bezier-subdivide",
   "version": "0.0.1",
   "description": "Bezier curve subdivision",
   "main": "index.js",

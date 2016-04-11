@@ -5,10 +5,19 @@ Bezier curve subdivision in JavaScript
 
 Based on [Anti-Grain Geometry bezier subdivision](http://antigrain.com/research/adaptive_bezier/)
 
+## Usage
+
+Points are represented by 2-element arrays.
+
 ```javascript
 var subdivide = require("bezier-subdivide");
 
-var curve = [[0, 0], [0, 50], [50, 100], [100, 100]];
-var points = subdivide(curve);
-// [[0,0],[0.09765625,4.6875],[1.23291015625,14.02587890625],...,[100,100]]
+var curve = [[100, 200], [200, 50], [50, 100], [200, 200]];
+var points = subdivide(curve); // subdivided points
 ```
+
+[![https://gyazo.com/f8584661f74872afd5ed33699bca0e5b](https://i.gyazo.com/f8584661f74872afd5ed33699bca0e5b.png)](https://gyazo.com/f8584661f74872afd5ed33699bca0e5b)
+
+### `subdivide(points[, options])`
+
+* `points`: Array of points (start, control point 1, control point 2, end)

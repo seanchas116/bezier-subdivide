@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var canvas = document.getElementById("test-canvas");
   var context = canvas.getContext("2d");
 
-  var curve = [[100, 200], [250, 50], [50, 50], [200, 200]];
+  var curve = [[100, 200], [200, 50], [50, 100], [200, 200]];
   var points = subdivide(curve);
 
   context.beginPath();

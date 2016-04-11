@@ -1,6 +1,8 @@
 bezier-subdivide
 ========
 
+[![Build Status](https://travis-ci.org/seanchas116/bezier-subdivide.svg?branch=master)](https://travis-ci.org/seanchas116/bezier-subdivide)
+
 Bezier curve subdivision in JavaScript
 
 Based on [Anti-Grain Geometry bezier subdivision](http://antigrain.com/research/adaptive_bezier/)

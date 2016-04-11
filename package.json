@@ -4,7 +4,7 @@
   "description": "Bezier curve subdivision",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape test.js",
     "example:build": "browserify example/example.js -o example/bundle.js"
   },
   "author": "Ryohei Ikegami <iofg2100@gmail.com>",
@@ -16,7 +16,8 @@
     "object-assign": "^2.0.0"
   },
   "devDependencies": {
-    "browserify": "^9.0.7"
+    "browserify": "^9.0.7",
+    "tape": "^4.5.1"
   },
   "repository": {
     "type": "git",

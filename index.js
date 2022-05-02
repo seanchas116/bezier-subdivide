@@ -15,8 +15,6 @@
 
 "use strict";
 
-var assign = require("object-assign");
-
 function calc_sq_distance(x1, y1, x2, y2) {
   var dx = x2 - x1;
   var dy = y2 - y1;
@@ -42,7 +40,7 @@ function Subdivision(curve, opts) {
     angleTolerance: 0,
     cuspLimit: 0,
   };
-  assign(options, opts);
+  Object.assign(options, opts);
 
   this.points = [];
   this.approximation_scale = options.approximationScale;

@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var canvas = document.getElementById("test-canvas");
   var context = canvas.getContext("2d");
 
-  var curve = [[100, 200], [200, 50], [50, 100], [200, 200]];
+  var curve = [
+    [100, 200],
+    [200, 50],
+    [50, 100],
+    [200, 200],
+  ];
   var points = subdivide(curve);
 
   context.beginPath();
@@ -23,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   context.lineWidth = 2;
   context.strokeStyle = "grey";
-  for (var line of [[curve[0], curve[1]], [curve[2], curve[3]]]) {
+  for (var line of [
+    [curve[0], curve[1]],
+    [curve[2], curve[3]],
+  ]) {
     context.beginPath();
     context.moveTo(line[0][0], line[0][1]);
     context.lineTo(line[1][0], line[1][1]);

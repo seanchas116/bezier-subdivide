@@ -1,6 +1,6 @@
 # bezier-subdivide
 
-[![Build Status](https://travis-ci.org/seanchas116/bezier-subdivide.svg?branch=master)](https://travis-ci.org/seanchas116/bezier-subdivide)
+[![npm version](https://badge.fury.io/js/bezier-subdivide.svg)](https://badge.fury.io/js/bezier-subdivide)
 
 Bezier curve subdivision in JavaScript
 

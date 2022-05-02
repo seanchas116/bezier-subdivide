@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Bezier curve subdivision",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "tape test.js",
     "example:build": "browserify example/example.js -o example/bundle.js"
